@@ -1,0 +1,67 @@
+﻿<Window x:Class="Maket_Lab.ErrorTypePacket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Maket_Lab"
+        mc:Ignorable="d" MinHeight="300" MaxHeight="300" MinWidth="400" MaxWidth="400"
+        Title="Введіть данні" Height="300" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto" MinWidth="20"/>
+            <ColumnDefinition Width="auto" MinWidth="150" MaxWidth="150"/>
+            <ColumnDefinition Width="auto" MinWidth="20"/>
+            <ColumnDefinition Width="auto" MinWidth="150"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="Імовірність помилки в пакеті" Margin="5"/>
+        <TextBox Grid.Row="1" Grid.Column="4" Text="0.33" Margin="5" Width="120" MinWidth="120" />
+
+        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"  Text="Імовірність помилки між пакетами" Margin="5"/>
+        <TextBox Grid.Row="2" Grid.Column="4" Text="0.000001" Margin="5" Width="120" MinWidth="120" />
+
+        <TextBlock  Grid.Row="3" Grid.Column="1" Text="p1" Margin="5"/>
+        <TextBox    Grid.Row="3" Grid.Column="2" Text="1.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBlock  Grid.Row="3" Grid.Column="3" Text="q1" Margin="5"/>
+        <TextBox    Grid.Row="3" Grid.Column="4" Text="0.9" Margin="5" Width="120" MinWidth="120" />
+
+        <TextBlock  Grid.Row="4" Grid.Column="1" Text="p2" Margin="5"/>
+        <TextBox    Grid.Row="4" Grid.Column="2" Text="0.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBlock  Grid.Row="4" Grid.Column="3" Text="q2" Margin="5"/>
+        <TextBox    Grid.Row="4" Grid.Column="4" Text="0.94" Margin="5" Width="120" MinWidth="120" />
+
+        <TextBlock  Grid.Row="5" Grid.Column="1" Text="p3" Margin="5"/>
+        <TextBox    Grid.Row="5" Grid.Column="2" Text="0.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBlock  Grid.Row="5" Grid.Column="3" Text="q3" Margin="5"/>
+        <TextBox    Grid.Row="5" Grid.Column="4" Text="0.996" Margin="5" Width="120" MinWidth="120" />
+
+        <TextBlock  Grid.Row="6" Grid.Column="1" Text="h1" Margin="5"/>
+        <TextBox    Grid.Row="6" Grid.Column="2" Text="1.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBlock  Grid.Row="6" Grid.Column="3" Text="r1" Margin="5"/>
+        <TextBox    Grid.Row="6" Grid.Column="4" Text="0.9979" Margin="5" Width="120" MinWidth="120" />
+
+        <TextBlock  Grid.Row="7" Grid.Column="1" Text="h2" Margin="5"/>
+        <TextBox    Grid.Row="7" Grid.Column="2" Text="0.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBlock  Grid.Row="7" Grid.Column="3" Text="r2" Margin="5"/>
+        <TextBox    Grid.Row="7" Grid.Column="4" Text="0.9979" Margin="5" Width="120" MinWidth="120" />
+
+        <Button Content="Підтвердити" Grid.Column="1" Grid.Row="8" Margin="5,10,5,5" HorizontalAlignment="Center" MinWidth="60" Grid.ColumnSpan="4" />
+
+    </Grid>
+</Window>

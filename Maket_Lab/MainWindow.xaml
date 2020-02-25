@@ -22,7 +22,7 @@
                     <MenuItem Header="Циклічні коди" ></MenuItem>
                     <MenuItem Header="Кодер користувача" ></MenuItem>
                 </MenuItem>
-                <MenuItem Header="Перемішування" ></MenuItem>
+                <MenuItem Header="Перемішування" Click="Shuffle_Click" ></MenuItem>
                 <MenuItem Header="Модель каналу" Click="ChanellModel_Click" ></MenuItem>
             </MenuItem>
             <MenuItem Header="Режим відображення" >

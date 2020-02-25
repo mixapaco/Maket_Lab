@@ -42,6 +42,11 @@ namespace Maket_Lab
             ChannelModel channelModel = new ChannelModel();
             channelModel.Show();
         }
+        private void Shuffle_Click(object sender, RoutedEventArgs e)
+        {
+            ShuffleFileWin shuffleFileWin = new ShuffleFileWin();
+            shuffleFileWin.Show();
+        }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {

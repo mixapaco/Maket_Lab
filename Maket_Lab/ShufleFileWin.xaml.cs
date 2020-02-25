@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Maket_Lab
 {
     /// <summary>
-    /// Логика взаимодействия для ChannelModel.xaml
+    /// Логика взаимодействия для ShufleFileWin.xaml
     /// </summary>
-    public partial class ChannelModel : Window
+    public partial class ShuffleFileWin : Window
     {
-        public ChannelModel()
+        public ShuffleFileWin()
         {
             InitializeComponent();
         }
@@ -28,26 +28,11 @@ namespace Maket_Lab
         {
             this.Close();
         }
-        private void Error_Click(object sender, RoutedEventArgs e)
-        {
-            if((bool)ErrSingleRadio.IsChecked)
-            {
-                ErrorTypeSingle errWin = new ErrorTypeSingle();
-                errWin.Show();
-            }
-            if((bool)ErrPacketRadio.IsChecked)
-            {
-                ErrorTypePacket errWin = new ErrorTypePacket();
-                errWin.Show();
-            }
-        }
-
         private void Help_Click(object sender, RoutedEventArgs e)
         {
             Help h = new Help("");
             h.SetMsg("Скоро");
             h.Show();
         }
-
     }
 }
