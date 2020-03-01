@@ -55,6 +55,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Codecs\BCHCodecWin.xaml.cs">
+      <DependentUpon>BCHCodecWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Codecs\IterativeCodecWin.xaml.cs">
+      <DependentUpon>IterativeCodecWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Codecs\LoopCodecWin.xaml.cs">
+      <DependentUpon>LoopCodecWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Codecs\VeterbiCodecWin.xaml.cs">
+      <DependentUpon>VeterbiCodecWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileWork\BinFileCreator.cs" />
+    <Compile Include="FileWork\FileGeter.cs" />
+    <Compile Include="FileWork\FileSaver.cs" />
     <Compile Include="ShufleFileWin.xaml.cs">
       <DependentUpon>ShufleFileWin.xaml</DependentUpon>
     </Compile>
@@ -63,6 +78,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChannelModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Codecs\BCHCodecWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Codecs\IterativeCodecWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Codecs\LoopCodecWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Codecs\VeterbiCodecWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

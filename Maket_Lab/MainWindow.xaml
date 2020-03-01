@@ -16,10 +16,10 @@
             <MenuItem Header="Лабораторні роботи" >
                 <MenuItem Header="Кодеки" >
                     <MenuItem Header="Вибір кодека" ></MenuItem>
-                    <MenuItem Header="Кодер Ветербі" ></MenuItem>
-                    <MenuItem Header="Ітеративний" ></MenuItem>
-                    <MenuItem Header="БЧХ -- код" ></MenuItem>
-                    <MenuItem Header="Циклічні коди" ></MenuItem>
+                    <MenuItem Header="Кодер Ветербі" Click="Viterbi_Click" ></MenuItem>
+                    <MenuItem Header="Ітеративний" Click="Iterative_Click"></MenuItem>
+                    <MenuItem Header="БЧХ -- код" Click="BCH_Click" ></MenuItem>
+                    <MenuItem Header="Циклічні коди" Click="Loop_Click" ></MenuItem>
                     <MenuItem Header="Кодер користувача" ></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Перемішування" Click="Shuffle_Click" ></MenuItem>

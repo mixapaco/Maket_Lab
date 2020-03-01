@@ -28,11 +28,50 @@ namespace Maket_Lab
         {
             this.Close();
         }
+       
         private void Help_Click(object sender, RoutedEventArgs e)
         {
             Help h = new Help("");
             h.SetMsg("Перевірка");
             h.Show();
+        }
+
+        private void Create_Click(object sender, RoutedEventArgs e)
+        {
+            bool bit = true;
+            string fileName = "new_file.bin";
+            Int32 numBits = 100;
+
+            FileWork.FileSaver fileSaver = new FileWork.FileSaver();
+            string filePath = fileSaver.SaveFile(fileName);
+            if (!String.IsNullOrEmpty(filePath))
+                fileName = filePath;
+            else
+            {
+                MessageBox.Show("Не вірний шлях до файлу");
+                return;
+            }
+
+            if((bool)BitsTypeZero.IsChecked)
+            {
+                bit = false;
+            }
+
+            if (!String.IsNullOrEmpty(FileSizeBox.Text))
+            {
+                numBits = Convert.ToInt32(FileSizeBox.Text);
+            }
+
+            FileWork.BinFileCreator fileCreator = new FileWork.BinFileCreator();
+            if (fileCreator.CreateFile(fileName, numBits, bit)) 
+            {
+                MessageBox.Show("Готово");
+            }
+            else
+            {
+                MessageBox.Show("Не вдалося створити файл");
+            }
+            
         }
     }
 }

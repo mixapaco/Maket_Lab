@@ -52,5 +52,30 @@ namespace Maket_Lab
         {
             this.Close();
         }
+
+        private void Viterbi_Click(object sender, RoutedEventArgs e)
+        {
+            Codecs.VeterbiCodecWin veterbiCodecWin = new Codecs.VeterbiCodecWin();
+            veterbiCodecWin.Show();
+
+        }
+
+        private void Iterative_Click(object sender, RoutedEventArgs e)
+        {
+            Codecs.IterativeCodecWin iterativeCodecWin = new Codecs.IterativeCodecWin();
+            iterativeCodecWin.Show();
+        }
+
+        private void BCH_Click(object sender, RoutedEventArgs e)
+        {
+            Codecs.BCHCodecWin codecWin = new Codecs.BCHCodecWin();
+            codecWin.Show();
+        }
+
+        private void Loop_Click(object sender, RoutedEventArgs e)
+        {
+            Codecs.LoopCodecWin loopCodecWin = new Codecs.LoopCodecWin();
+            loopCodecWin.Show();
+        }
     }
 }
