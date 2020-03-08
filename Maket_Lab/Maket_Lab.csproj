@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CodecsWork\IterativeCodec.cs" />
     <Compile Include="Codecs\BCHCodecWin.xaml.cs">
       <DependentUpon>BCHCodecWin.xaml</DependentUpon>
     </Compile>
@@ -68,6 +69,7 @@
       <DependentUpon>VeterbiCodecWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="FileWork\BinFileCreator.cs" />
+    <Compile Include="FileWork\BinFileReader.cs" />
     <Compile Include="FileWork\FileGeter.cs" />
     <Compile Include="FileWork\FileSaver.cs" />
     <Compile Include="ShufleFileWin.xaml.cs">

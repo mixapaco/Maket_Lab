@@ -30,5 +30,28 @@ namespace Maket_Lab.FileWork
             }
             return true;
         }
+
+        public bool WriteInFile(List<bool> bits , string filePath = "new_file.bin" )
+        {
+            int i = 0;
+            try
+            {
+                using (BinaryWriter writer = new BinaryWriter(File.Open(filePath, FileMode.Create)))
+                {
+                    while (i < bits.Count)
+                    {
+                        writer.Write(bits[i]);
+                        i++;
+                    }
+
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
+
     }
 }

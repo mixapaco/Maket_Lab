@@ -49,7 +49,7 @@
             <RadioButton GroupName="Shuffle" Content="Декодувати" />
         </StackPanel>
 
-        <Button Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Width="80" HorizontalAlignment="Left" Content="Виконати" Margin="5" />
+        <Button Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Width="80" HorizontalAlignment="Left" Click="Execute_Click" Content="Виконати" Margin="5" />
 
         <Button Grid.Row="8" Grid.Column="4" Width="80" HorizontalAlignment="Center" Click="Exit_Click" Content="Вийти" Margin="5" />
         <Button Grid.Row="8" Grid.Column="6" Width="80" HorizontalAlignment="Center" Click="Help_Click" Content="Довідка" Margin="5" />

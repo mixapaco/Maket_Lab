@@ -53,6 +53,18 @@ namespace Maket_Lab.Codecs
                 OutPutFile.Text = fileGeter.GetFileNameFull();
             }
         }
+        private void Execute_Click(object sender, RoutedEventArgs e)
+        {
+            FileWork.BinFileReader binFileReader = new FileWork.BinFileReader();
+            List <bool> bits = binFileReader.ReadFile(InputFile.Text);
+            bits[3] = true;
+            CodecsWork.IterativeCodec iterativeCodec = new CodecsWork.IterativeCodec();
+            bits = iterativeCodec.CodeBits(bits.ToArray());
+            
+
+            FileWork.BinFileCreator binFileCreator = new FileWork.BinFileCreator();
+            binFileCreator.WriteInFile(bits, OutPutFile.Text);
+        }
     }
 }
 
