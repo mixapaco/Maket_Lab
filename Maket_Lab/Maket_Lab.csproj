@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BinWork\BinWorker.cs" />
+    <Compile Include="BinWork\Matrix.cs" />
     <Compile Include="CodecsWork\IterativeCodec.cs" />
     <Compile Include="Codecs\BCHCodecWin.xaml.cs">
       <DependentUpon>BCHCodecWin.xaml</DependentUpon>

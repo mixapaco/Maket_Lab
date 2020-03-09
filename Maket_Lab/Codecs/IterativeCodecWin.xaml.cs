@@ -57,9 +57,9 @@ namespace Maket_Lab.Codecs
         {
             FileWork.BinFileReader binFileReader = new FileWork.BinFileReader();
             List <bool> bits = binFileReader.ReadFile(InputFile.Text);
-            bits[3] = true;
+            
             CodecsWork.IterativeCodec iterativeCodec = new CodecsWork.IterativeCodec();
-            bits = iterativeCodec.CodeBits(bits.ToArray());
+            bits = iterativeCodec.CodeBits(bits);
             
 
             FileWork.BinFileCreator binFileCreator = new FileWork.BinFileCreator();
