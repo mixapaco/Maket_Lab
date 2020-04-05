@@ -45,7 +45,7 @@
 
         <TextBlock Grid.Row="5" Grid.Column="2" Text="Дія" HorizontalAlignment="Center" Margin="5"/>
         <StackPanel x:Name="ShuffleBox" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Row="6" Margin="5,10,0,5">
-            <RadioButton GroupName="Shuffle" Content="Закодувати" IsChecked="True" />
+            <RadioButton x:Name="CodeRadio" GroupName="Shuffle" Content="Закодувати" IsChecked="True" />
             <RadioButton GroupName="Shuffle" Content="Декодувати" />
         </StackPanel>
 

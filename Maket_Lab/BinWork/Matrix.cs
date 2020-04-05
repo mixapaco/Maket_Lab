@@ -11,25 +11,22 @@ namespace Maket_Lab.BinWork
 
         static public List<List<bool>> CreateMatrix(List<bool> bits,int MaxX, int MaxY)
         {
-            int x = 0, y = 0;
+
             List<List<bool>> Matrix = new List<List<bool>>() ;
 
             List<bool> buf = new List<bool>();
-
-            foreach (bool bit in bits)
+            
+            for(int y = 0, i = 0; y < MaxY; y++)
             {
-
-                buf.Add(bit);
-
-                x++;
-                if (MaxX <= x)
+                for (int x = 0; x < MaxX; x++)
                 {
-                    x = 0;
-                    y++;
-                    Matrix.Add(new List<bool>(buf));
-                    buf.Clear();
+                    if(bits.Count > i)
+                        buf.Add(bits[i++]);
+                    else
+                        buf.Add(false);
                 }
-
+                Matrix.Add(new List<bool>(buf));
+                buf.Clear();
             }
 
             return Matrix;
@@ -67,6 +64,15 @@ namespace Maket_Lab.BinWork
             return buf;
         }
 
+        static public List<List<bool>> RemoveColumn(List<List<bool>> bits, int x)
+        {
+            
+            foreach (var bit in bits)
+            {
+                bit.RemoveAt(bit.Count-1);
+            }
+            return bits;
+        }
 
     }
 }

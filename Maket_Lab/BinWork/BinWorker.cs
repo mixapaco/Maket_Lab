@@ -8,6 +8,10 @@ namespace Maket_Lab.BinWork
 {
     class BinWorker
     {
+        static public bool Reverse(bool bit)
+        {
+            return bit?false:true;
+        }
 
 
         static public bool CountMod2(List<bool> bits)

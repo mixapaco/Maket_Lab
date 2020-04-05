@@ -59,8 +59,10 @@ namespace Maket_Lab.Codecs
             List <bool> bits = binFileReader.ReadFile(InputFile.Text);
             
             CodecsWork.IterativeCodec iterativeCodec = new CodecsWork.IterativeCodec();
-            bits = iterativeCodec.CodeBits(bits);
-            
+            if(CodeRadio.IsChecked == true)
+                bits = iterativeCodec.CodeLineBits(bits);
+            else
+                bits = iterativeCodec.DeCodeLineBits(bits);
 
             FileWork.BinFileCreator binFileCreator = new FileWork.BinFileCreator();
             binFileCreator.WriteInFile(bits, OutPutFile.Text);
