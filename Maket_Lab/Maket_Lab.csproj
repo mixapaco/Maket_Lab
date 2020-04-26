@@ -58,6 +58,7 @@
     <Compile Include="BinWork\BinWorker.cs" />
     <Compile Include="BinWork\Matrix.cs" />
     <Compile Include="CodecsWork\IterativeCodec.cs" />
+    <Compile Include="CodecsWork\LoopCodec.cs" />
     <Compile Include="Codecs\BCHCodecWin.xaml.cs">
       <DependentUpon>BCHCodecWin.xaml</DependentUpon>
     </Compile>

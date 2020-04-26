@@ -61,26 +61,26 @@
 
 
         <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="6" Text="Поліном P(x) = q(x)*(x^c+1)" HorizontalAlignment="Left" Margin="5"/>
-        <TextBox x:Name="Polinom" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="6" Text="101100010011011010101" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="200"/>
+        <TextBox x:Name="Polinom" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="6" Text="1101" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="200"/>
 
         <TextBlock Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="6" Text="Параметри циклічного коду" HorizontalAlignment="Left" Margin="5"/>
         <TextBlock Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="6" Text="Довжина пачки помилки Твипр." HorizontalAlignment="Left" Margin="5"/>
-        <TextBox x:Name="TCorrect" Grid.Row="7" Grid.Column="6" Grid.ColumnSpan="3" Text="5" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="120" MinWidth="120" />
+        <TextBox x:Name="TCorrect" Grid.Row="7" Grid.Column="6" Grid.ColumnSpan="3" Text="1" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="120" MinWidth="120" />
         <TextBlock Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="6" Text="Довжина кодової комбінації n" HorizontalAlignment="Left" Margin="5"/>
-        <TextBox x:Name="n" Grid.Row="8" Grid.Column="6" Grid.ColumnSpan="3" Text="31" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="120" MinWidth="120" />
+        <TextBox x:Name="n" Grid.Row="8" Grid.Column="6" Grid.ColumnSpan="3" Text="7" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="120" MinWidth="120" />
         <TextBlock Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="6" Text="Кількість перевірочних розрядів r" HorizontalAlignment="Left" Margin="5"/>
-        <TextBox x:Name="r" Grid.Row="9" Grid.Column="6" Grid.ColumnSpan="3" Text="20" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="120" MinWidth="120" />
+        <TextBox x:Name="r" Grid.Row="9" Grid.Column="6" Grid.ColumnSpan="3" Text="3" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="120" MinWidth="120" />
         <TextBlock Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="6" Text="Кількість інформаційних розрядів k" HorizontalAlignment="Left" Margin="5"/>
-        <TextBox x:Name="k" Grid.Row="10" Grid.Column="6" Grid.ColumnSpan="3" Text="11" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="120" MinWidth="120" />
+        <TextBox x:Name="k" Grid.Row="10" Grid.Column="6" Grid.ColumnSpan="3" Text="4" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="120" MinWidth="120" />
 
 
         <TextBlock Grid.Row="11" Grid.Column="2" Text="Дія" HorizontalAlignment="Center" Margin="5"/>
         <StackPanel x:Name="ShuffleBox" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Row="12" Margin="5,10,0,5">
-            <RadioButton GroupName="Shuffle" Content="Закодувати" IsChecked="True" />
+            <RadioButton x:Name="CodeRadio" GroupName="Shuffle" Content="Закодувати" IsChecked="True" />
             <RadioButton GroupName="Shuffle" Content="Декодувати" />
         </StackPanel>
 
-        <Button Grid.Row="14" Grid.Column="1" Grid.ColumnSpan="3" Width="80" HorizontalAlignment="Left" Content="Виконати" Margin="5" />
+        <Button Grid.Row="14" Grid.Column="1" Grid.ColumnSpan="3" Width="80" HorizontalAlignment="Left" Click="Execute_Click" Content="Виконати" Margin="5" />
 
         <Button Grid.Row="14" Grid.Column="4" Grid.ColumnSpan="2" Width="80" HorizontalAlignment="Right" Click="Exit_Click" Content="Вийти" Margin="5" />
         <Button Grid.Row="14" Grid.Column="6" Grid.ColumnSpan="2" Width="80" HorizontalAlignment="Right" Click="Help_Click" Content="Довідка" Margin="5" />
