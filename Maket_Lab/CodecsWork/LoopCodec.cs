@@ -18,7 +18,7 @@ namespace Maket_Lab.CodecsWork
             Polinom = new List<bool>();
             KCount = kCount;
             R = RCount;
-            t = tCount;
+            T = tCount;
             foreach (var bit in polinom)
             {
                 Polinom.Add(bit == '1' ? true : false);
@@ -26,6 +26,7 @@ namespace Maket_Lab.CodecsWork
             }
         }
 
+        public int T { get => t; set => t = value; }
         public int R { get => r; set => r = value; }
         public int KCount { get => K; set => K = value; }
 
@@ -101,7 +102,7 @@ namespace Maket_Lab.CodecsWork
                 return bits;
             int q = 0;
             List<bool> buf = new List<bool>(bits);
-            while (RemainsCount2 > 1)
+            while (RemainsCount2 > T)
             {
                 BinWork.BinWorker.MoveToLeft(buf, 1);
                 remain = BinWork.BinWorker.GetDivRemains(new List<bool>(buf), Polinom);

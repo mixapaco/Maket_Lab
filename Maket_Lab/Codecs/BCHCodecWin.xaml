@@ -116,7 +116,7 @@
             </ComboBoxItem>
         </ComboBox>
 
-        <Button Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="3" MaxWidth="120"  Content="Вирахувати" Margin="5" />
+        <Button Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="3" MaxWidth="120" Click="Calc_Click"  Content="Вирахувати" Margin="5" />
 
         <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="6" Text="Поліном P(x) = p1*p2*...*pn" HorizontalAlignment="Left" Margin="5"/>
         <TextBox x:Name="Polinom" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="6" Text="" Margin="5" HorizontalAlignment="Left" MaxHeight="20" Width="200"/>

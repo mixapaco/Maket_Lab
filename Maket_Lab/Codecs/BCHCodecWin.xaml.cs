@@ -53,5 +53,11 @@ namespace Maket_Lab.Codecs
                 OutPutFile.Text = fileGeter.GetFileNameFull();
             }
         }
+
+        private void Calc_Click(object sender, RoutedEventArgs e)
+        {
+            CodecsWork.BCHCodec codec = new CodecsWork.BCHCodec(4,7);
+            codec.CreatePolinom();
+        }
     }
 }

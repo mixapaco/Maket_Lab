@@ -104,7 +104,7 @@ namespace Maket_Lab.BinWork
             List<bool> buf = new List<bool>();
             if (bits.Count > 0)
             {
-                for (int i = count - 1; i >= count; i--)
+                for (int i = bits.Count - 1; i >= bits.Count - count; i--)
                 {
 
                     buf.Add(bits[i]);
@@ -115,6 +115,24 @@ namespace Maket_Lab.BinWork
                 bits = buf;
             }
             return bits;
+        }
+        public static List<bool> MultBits(List<bool> bitsA , List<bool> bitsB )
+        {
+            List<bool> buf = new List<bool>();
+            buf = ConcatBitsToStart(buf, bitsA.Count-1);
+            int i = 0;
+            foreach (var bit in bitsB)
+            {
+                buf = ConcatBitsToEnd(buf, 1);
+
+                if (bit)
+                {
+                    buf = AddBits(buf,bitsA ,i);
+                }
+                i++;
+            }
+
+            return buf;
         }
     }
 }
