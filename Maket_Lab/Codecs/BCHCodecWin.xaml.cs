@@ -56,8 +56,30 @@ namespace Maket_Lab.Codecs
 
         private void Calc_Click(object sender, RoutedEventArgs e)
         {
-            CodecsWork.BCHCodec codec = new CodecsWork.BCHCodec(4,7);
-            codec.CreatePolinom();
+            Int32 m = Int32.Parse(((TextBlock)((ComboBoxItem)M.SelectedItem).Content).Text);
+            Int32 Tmin = Int32.Parse(((TextBlock)((ComboBoxItem)TСorrect.SelectedItem).Content).Text);
+            CodecsWork.BCHCodec codec = new CodecsWork.BCHCodec(m,Tmin);
+            Polinom.Text = BinWork.BinWorker.ToString(codec.CreatePolinom());
+            n.Text = codec.N.ToString();
+            r.Text = codec.R.ToString();
+            k.Text = codec.K.ToString();
+             
+        }
+
+        private void Execute_Click(object sender, RoutedEventArgs e)
+        {
+            FileWork.BinFileReader binFileReader = new FileWork.BinFileReader();
+            List<bool> bits = binFileReader.ReadFile(InputFile.Text);
+
+            Int32 Tmin = Int32.Parse(((TextBlock)((ComboBoxItem)TСorrect.SelectedItem).Content).Text);
+            CodecsWork.LoopCodec loopCodec = new CodecsWork.LoopCodec(Polinom.Text, Int32.Parse(r.Text), Int32.Parse(k.Text), Tmin);
+            if (CodeRadio.IsChecked == true)
+                bits = loopCodec.CodeLineBits(bits);
+            else
+                bits = loopCodec.DeCodeLineBits(bits);
+
+            FileWork.BinFileCreator binFileCreator = new FileWork.BinFileCreator();
+            binFileCreator.WriteInFile(bits, OutPutFile.Text);
         }
     }
 }

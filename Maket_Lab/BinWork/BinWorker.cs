@@ -134,5 +134,18 @@ namespace Maket_Lab.BinWork
 
             return buf;
         }
+
+        public static string ToString(List<bool> bits)
+        {
+            string res = "";
+            foreach (var bit in bits)
+            {
+                if (bit)
+                    res += "1";
+                else
+                    res += "0";
+            }
+            return res;
+        }
     }
 }
