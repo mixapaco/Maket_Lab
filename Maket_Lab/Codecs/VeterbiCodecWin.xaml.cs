@@ -35,5 +35,35 @@ namespace Maket_Lab.Codecs
         {
             this.Close();
         }
+        private void SelectFile_Click(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            if (b.Name == "InputButton")
+            {
+                FileWork.FileGeter fileGeter = new FileWork.FileGeter();
+
+                InputFile.Text = fileGeter.GetFileNameFull();
+            }
+
+            if (b.Name == "OutPutButton")
+            {
+                FileWork.FileGeter fileGeter = new FileWork.FileGeter();
+
+                OutPutFile.Text = fileGeter.GetFileNameFull();
+            }
+        }
+        private void Execute_Click(object sender, RoutedEventArgs e)
+        {
+            FileWork.BinFileReader binFileReader = new FileWork.BinFileReader();
+            List<bool> bits = binFileReader.ReadFile(InputFile.Text);
+
+            if (CodeRadio.IsChecked == true)
+                bits = CodecsWork.СonvolutionalCoder.CodeLineBits(bits);
+            else
+                bits = CodecsWork.ViterbiCodec.DecodeLineBits(bits);
+            
+            FileWork.BinFileCreator binFileCreator = new FileWork.BinFileCreator();
+            binFileCreator.WriteInFile(bits, OutPutFile.Text);
+        }
     }
 }

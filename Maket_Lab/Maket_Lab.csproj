@@ -60,6 +60,8 @@
     <Compile Include="CodecsWork\BCHCodec.cs" />
     <Compile Include="CodecsWork\IterativeCodec.cs" />
     <Compile Include="CodecsWork\LoopCodec.cs" />
+    <Compile Include="CodecsWork\ViterbiCodec.cs" />
+    <Compile Include="CodecsWork\СonvolutionalCoder.cs" />
     <Compile Include="Codecs\BCHCodecWin.xaml.cs">
       <DependentUpon>BCHCodecWin.xaml</DependentUpon>
     </Compile>
