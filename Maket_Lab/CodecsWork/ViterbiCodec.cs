@@ -31,16 +31,22 @@ namespace Maket_Lab.CodecsWork // невідомо як але воно паше
             ViterbiCoef =  GetViterbiCoef();
             Ways = new List<List<List<bool>>>();
 
-            CalculateWeight(ref weight, new List<bool>() {true , false } , 1);
-            CalculateWeight(ref weight, new List<bool>() { false, false }, 2);
-            CalculateWeight(ref weight, new List<bool>() { true, false } , 4);
-            CalculateWeight(ref weight, new List<bool>() { false, false }, 4);
-            CalculateWeight(ref weight, new List<bool>() { false, false }, 4);
-            CalculateWeight(ref weight, new List<bool>() { false, false }, 4);
-            CalculateWeight(ref weight, new List<bool>() { false, false }, 4);
-            CalculateWeight(ref weight, new List<bool>() { false, false }, 4);
-            CalculateWeight(ref weight, new List<bool>() { false, false }, 4);
-            CalculateWeight(ref weight, new List<bool>() { false, false }, 4);
+            int step = 1;
+            if(bits.Count >= 2)
+            for (int i = 0; i < bits.Count; i+=2)
+            {
+                    List<bool> buf = new List<bool>
+                    {
+                        bits[i],
+                        bits[i + 1]
+                    };
+                    CalculateWeight(ref weight, buf, step);
+                if(step <= 2)
+                {
+                    step *= 2;
+                }
+            }
+            
             bits = TraceBack(Ways , weight);
             
             return bits;
