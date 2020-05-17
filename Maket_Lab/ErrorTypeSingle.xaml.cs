@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,19 @@ namespace Maket_Lab
     /// </summary>
     public partial class ErrorTypeSingle : Window
     {
-        public ErrorTypeSingle()
+        public WindowsWork.ErrorPassHolder parameters;
+        public ErrorTypeSingle(WindowsWork.ErrorPassHolder param)
         {
             InitializeComponent();
+            parameters = param;
+            parameters.SetParams(new Dictionary<string, double>() { ["SingleError"] = Double.Parse(ProbError.Text.Replace(',', '.'), CultureInfo.InvariantCulture), ["Noise"] = Double.Parse(Noise.Text.Replace(',', '.'), CultureInfo.InvariantCulture), ["typeSingle"] = Double.Parse(((ProbCheck.IsChecked == true) ? "1.0" : "0.0").Replace(',', '.'), CultureInfo.InvariantCulture) });
+           
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            parameters.SetParams(new Dictionary<string, double> { ["SingleError"]= Double.Parse(ProbError.Text.Replace(',', '.'), CultureInfo.InvariantCulture), ["Noise"] = Double.Parse(Noise.Text.Replace(',', '.'), CultureInfo.InvariantCulture) , ["typeSingle"] = Double.Parse(((ProbCheck.IsChecked == true) ? "1.0" : "0.0").Replace(',', '.'), CultureInfo.InvariantCulture) });
+            this.Close();
         }
     }
 }

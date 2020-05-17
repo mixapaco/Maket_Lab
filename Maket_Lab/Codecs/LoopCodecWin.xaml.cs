@@ -66,6 +66,7 @@ namespace Maket_Lab.Codecs
 
             FileWork.BinFileCreator binFileCreator = new FileWork.BinFileCreator();
             binFileCreator.WriteInFile(bits, OutPutFile.Text);
+            MessageBox.Show("Готово");
 
         }
     }

@@ -70,16 +70,25 @@ namespace Maket_Lab.Codecs
         {
             FileWork.BinFileReader binFileReader = new FileWork.BinFileReader();
             List<bool> bits = binFileReader.ReadFile(InputFile.Text);
+            try
+            {
+                Int32 Tmin = Int32.Parse(((TextBlock)((ComboBoxItem)TСorrect.SelectedItem).Content).Text);
+                CodecsWork.LoopCodec loopCodec = new CodecsWork.LoopCodec(Polinom.Text, Int32.Parse(r.Text), Int32.Parse(k.Text), Tmin);
+                if (CodeRadio.IsChecked == true)
+                    bits = loopCodec.CodeLineBits(bits);
+                else
+                    bits = loopCodec.DeCodeLineBits(bits);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Невірні данні");
+                return;
+            }
 
-            Int32 Tmin = Int32.Parse(((TextBlock)((ComboBoxItem)TСorrect.SelectedItem).Content).Text);
-            CodecsWork.LoopCodec loopCodec = new CodecsWork.LoopCodec(Polinom.Text, Int32.Parse(r.Text), Int32.Parse(k.Text), Tmin);
-            if (CodeRadio.IsChecked == true)
-                bits = loopCodec.CodeLineBits(bits);
-            else
-                bits = loopCodec.DeCodeLineBits(bits);
 
             FileWork.BinFileCreator binFileCreator = new FileWork.BinFileCreator();
             binFileCreator.WriteInFile(bits, OutPutFile.Text);
+            MessageBox.Show("Готово");
         }
     }
 }

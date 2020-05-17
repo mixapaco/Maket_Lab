@@ -52,8 +52,8 @@
         <TextBlock Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Text="Метод" HorizontalAlignment="Center" Margin="5"/>
         <StackPanel x:Name="TypeCodeBox" Grid.Column="4" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Row="6" Margin="5,10,0,5">
             <RadioButton GroupName="Type" Content="Алгоритм Вітербі" IsChecked="True" />
-            <RadioButton GroupName="Type" Content="Детермноване" />
-            <RadioButton GroupName="Type" Content="Послідовне" />
+            <!--<RadioButton GroupName="Type" Content="Детермноване" />
+            <RadioButton GroupName="Type" Content="Послідовне" />-->
         </StackPanel>
 
         

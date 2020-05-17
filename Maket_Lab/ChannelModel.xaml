@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Maket_Lab"
-        mc:Ignorable="d" MaxHeight="300" MinHeight="300" MaxWidth="400" MinWidth="400"
+        mc:Ignorable="d" MaxHeight="300" MinHeight="300" MaxWidth="800" MinWidth="400"
         Title="Телекомунікаційний канал" Height="300" Width="400">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -34,12 +34,12 @@
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="1" Grid.Column="1" Text="Перший файл" Margin="5" />
-        <TextBox Grid.Row="1" Grid.Column="2" Text="*.*" Margin="5" MinWidth="150" />
-        <Button Grid.Row="1" Grid.Column="3" Content="Вибрати" Margin="5" />
+        <TextBox x:Name="InputFile" Grid.Row="1" Grid.Column="2" Text="*.*" Margin="5" MinWidth="150" MaxWidth="150" />
+        <Button x:Name="InputButton" Grid.Row="1" Grid.Column="3" Content="Вибрати" Click="SelectFile_Click" Margin="5" />
 
         <TextBlock Grid.Row="2" Grid.Column="1" Text="Другий файл" Margin="5" />
-        <TextBox Grid.Row="2" Grid.Column="2" Text="*.*" Margin="5" MinWidth="150" />
-        <Button Grid.Row="2" Grid.Column="3" Content="Вибрати" Margin="5" />
+        <TextBox x:Name="OutPutFile" Grid.Row="2" Grid.Column="2" Text="*.*" Margin="5" MinWidth="150" MaxWidth="150" />
+        <Button x:Name="OutPutButton" Grid.Row="2" Grid.Column="3" Content="Вибрати" Click="SelectFile_Click" Margin="5" />
     
         <Rectangle Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Fill="AliceBlue" Height="4"/>
 
@@ -49,9 +49,9 @@
         <TextBlock Grid.Row="5" Grid.Column="2" Text="Тип помилки" Margin="5" />
 
         <StackPanel x:Name="SymetryBox" Grid.Column="1" Grid.Row="6" Margin="5,0,0,0">
-            <RadioButton GroupName="Symetry" Content="0 &lt;-&gt; 1" IsChecked="True" />
-            <RadioButton GroupName="Symetry" Content="0  -&gt;  1" />
-            <RadioButton GroupName="Symetry" Content="0  &lt;-  1" />
+            <RadioButton x:Name="Sim1" GroupName="Symetry" Content="0 &lt;-&gt; 1" IsChecked="True" />
+            <RadioButton x:Name="Sim2" GroupName="Symetry" Content="0  -&gt;  1" />
+            <RadioButton x:Name="Sim3" GroupName="Symetry" Content="0  &lt;-  1" />
         </StackPanel>
         <StackPanel x:Name="ErrorBox" Grid.Column="2" HorizontalAlignment="Left" MinWidth="60" Grid.Row="6" Margin="5,0,0,0">
             <RadioButton x:Name="ErrSingleRadio" GroupName="Error" Content="Одиночна" IsChecked="True" />
@@ -63,7 +63,7 @@
 
         <Rectangle Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Fill="AliceBlue" Height="4"/>
 
-        <Button Grid.Column="1" Grid.Row="9" Content="Передати" Grid.ColumnSpan="3" Margin="5" Width="80" HorizontalAlignment="Left" />
+        <Button Grid.Column="1" Grid.Row="9" Content="Передати" Grid.ColumnSpan="3" Margin="5" Click="Execute_Click" Width="80" HorizontalAlignment="Left" />
         <Button Grid.Column="2" Grid.Row="9" Content="Вихід" Click="Exit_Click" Margin="5" Width="80" HorizontalAlignment="Right" />
         <Button Grid.Column="3" Grid.Row="9" Content="Допомога" Click="Help_Click" Margin="5" Width="80" HorizontalAlignment="Left" />
 

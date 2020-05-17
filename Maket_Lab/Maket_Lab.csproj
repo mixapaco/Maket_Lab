@@ -58,8 +58,10 @@
     <Compile Include="BinWork\BinWorker.cs" />
     <Compile Include="BinWork\Matrix.cs" />
     <Compile Include="CodecsWork\BCHCodec.cs" />
+    <Compile Include="CodecsWork\ChanelModel.cs" />
     <Compile Include="CodecsWork\IterativeCodec.cs" />
     <Compile Include="CodecsWork\LoopCodec.cs" />
+    <Compile Include="CodecsWork\RandomErrorGenerator.cs" />
     <Compile Include="CodecsWork\ViterbiCodec.cs" />
     <Compile Include="CodecsWork\СonvolutionalCoder.cs" />
     <Compile Include="Codecs\BCHCodecWin.xaml.cs">
@@ -81,6 +83,7 @@
     <Compile Include="ShufleFileWin.xaml.cs">
       <DependentUpon>ShufleFileWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowsWork\ErrorPassHolder.cs" />
     <Page Include="About.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

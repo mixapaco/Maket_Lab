@@ -28,16 +28,16 @@
         
         <TextBlock Grid.Row="1" Grid.Column="1" Text="Імовірність помилки" Margin="5"/>
         <StackPanel x:Name="ErrorBox" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" HorizontalAlignment="Left" MinHeight="50" MinWidth="60"  Margin="5,0,0,0">
-            <RadioButton GroupName="Error" Margin="5,5,5,10" IsChecked="True" />
+            <RadioButton x:Name="ProbCheck" GroupName="Error" Margin="5,5,5,10" IsChecked="True" />
             
             <RadioButton GroupName="Error" Margin="5,10,5,5" />
         </StackPanel>
-        <TextBox Grid.Row="1" Grid.Column="3" Text="0.001" Margin="5" Width="120" MinWidth="120" />
+        <TextBox x:Name="ProbError" Grid.Row="1" Grid.Column="3" Text="0.001" Margin="5" Width="120" MinWidth="120" />
 
         <TextBlock Grid.Row="2" Grid.Column="1" Text="Сигнал/Шум" Margin="5"/>
-        <TextBox Grid.Row="2" Grid.Column="3" Text="3.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBox x:Name="Noise" Grid.Row="2" Grid.Column="3" Text="3.0" Margin="5" Width="120" MinWidth="120" />
 
-        <Button Content="Підтвердити" Grid.Column="1" Grid.Row="3" Margin="5" HorizontalAlignment="Center" MinWidth="60" Grid.ColumnSpan="3" />
+        <Button Content="Підтвердити" Grid.Column="1" Grid.Row="3" Margin="5" HorizontalAlignment="Center" Click="Button_Click" MinWidth="60" Grid.ColumnSpan="3" />
 
 
     </Grid>

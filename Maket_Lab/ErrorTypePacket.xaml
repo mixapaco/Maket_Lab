@@ -31,37 +31,37 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="Імовірність помилки в пакеті" Margin="5"/>
-        <TextBox Grid.Row="1" Grid.Column="4" Text="0.33" Margin="5" Width="120" MinWidth="120" />
+        <TextBox x:Name="ErrPacket" Grid.Row="1" Grid.Column="4" Text="0.33" Margin="5" Width="120" MinWidth="120" />
 
         <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"  Text="Імовірність помилки між пакетами" Margin="5"/>
-        <TextBox Grid.Row="2" Grid.Column="4" Text="0.000001" Margin="5" Width="120" MinWidth="120" />
+        <TextBox x:Name="ErrBetweenPacket" Grid.Row="2" Grid.Column="4" Text="0.000001" Margin="5" Width="120" MinWidth="120" />
 
         <TextBlock  Grid.Row="3" Grid.Column="1" Text="p1" Margin="5"/>
-        <TextBox    Grid.Row="3" Grid.Column="2" Text="1.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBox  x:Name="p1"   Grid.Row="3" Grid.Column="2" Text="1.0" Margin="5" Width="120" MinWidth="120" />
         <TextBlock  Grid.Row="3" Grid.Column="3" Text="q1" Margin="5"/>
-        <TextBox    Grid.Row="3" Grid.Column="4" Text="0.9" Margin="5" Width="120" MinWidth="120" />
+        <TextBox  x:Name="q1"  Grid.Row="3" Grid.Column="4" Text="0.9" Margin="5" Width="120" MinWidth="120" />
 
         <TextBlock  Grid.Row="4" Grid.Column="1" Text="p2" Margin="5"/>
-        <TextBox    Grid.Row="4" Grid.Column="2" Text="0.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBox  x:Name="p2"  Grid.Row="4" Grid.Column="2" Text="0.0" Margin="5" Width="120" MinWidth="120" />
         <TextBlock  Grid.Row="4" Grid.Column="3" Text="q2" Margin="5"/>
-        <TextBox    Grid.Row="4" Grid.Column="4" Text="0.94" Margin="5" Width="120" MinWidth="120" />
+        <TextBox  x:Name="q2"  Grid.Row="4" Grid.Column="4" Text="0.94" Margin="5" Width="120" MinWidth="120" />
 
         <TextBlock  Grid.Row="5" Grid.Column="1" Text="p3" Margin="5"/>
-        <TextBox    Grid.Row="5" Grid.Column="2" Text="0.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBox  x:Name="p3"  Grid.Row="5" Grid.Column="2" Text="0.0" Margin="5" Width="120" MinWidth="120" />
         <TextBlock  Grid.Row="5" Grid.Column="3" Text="q3" Margin="5"/>
-        <TextBox    Grid.Row="5" Grid.Column="4" Text="0.996" Margin="5" Width="120" MinWidth="120" />
+        <TextBox  x:Name="q3"  Grid.Row="5" Grid.Column="4" Text="0.996" Margin="5" Width="120" MinWidth="120" />
 
         <TextBlock  Grid.Row="6" Grid.Column="1" Text="h1" Margin="5"/>
-        <TextBox    Grid.Row="6" Grid.Column="2" Text="1.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBox  x:Name="h1"  Grid.Row="6" Grid.Column="2" Text="1.0" Margin="5" Width="120" MinWidth="120" />
         <TextBlock  Grid.Row="6" Grid.Column="3" Text="r1" Margin="5"/>
-        <TextBox    Grid.Row="6" Grid.Column="4" Text="0.9979" Margin="5" Width="120" MinWidth="120" />
+        <TextBox  x:Name="r1"  Grid.Row="6" Grid.Column="4" Text="0.9979" Margin="5" Width="120" MinWidth="120" />
 
         <TextBlock  Grid.Row="7" Grid.Column="1" Text="h2" Margin="5"/>
-        <TextBox    Grid.Row="7" Grid.Column="2" Text="0.0" Margin="5" Width="120" MinWidth="120" />
+        <TextBox  x:Name="h2"  Grid.Row="7" Grid.Column="2" Text="0.0" Margin="5" Width="120" MinWidth="120" />
         <TextBlock  Grid.Row="7" Grid.Column="3" Text="r2" Margin="5"/>
-        <TextBox    Grid.Row="7" Grid.Column="4" Text="0.9979" Margin="5" Width="120" MinWidth="120" />
+        <TextBox  x:Name="r2"  Grid.Row="7" Grid.Column="4" Text="0.9979" Margin="5" Width="120" MinWidth="120" />
 
-        <Button Content="Підтвердити" Grid.Column="1" Grid.Row="8" Margin="5,10,5,5" HorizontalAlignment="Center" MinWidth="60" Grid.ColumnSpan="4" />
+        <Button Content="Підтвердити" Grid.Column="1" Grid.Row="8" Margin="5,10,5,5" HorizontalAlignment="Center" Click="Button_Click" MinWidth="60" Grid.ColumnSpan="4" />
 
     </Grid>
 </Window>
