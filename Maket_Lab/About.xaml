@@ -16,11 +16,19 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions >
             <RowDefinition Height="20" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
         <TextBlock Text="Розроблено : Піховьким Михайлом Романовичем" Grid.Column="1" Grid.Row="1" FontSize="14"/>
+        <TextBlock Text="Знайшов помилку і хочеш пофіксити " Grid.Column="1" Grid.Row="2" FontSize="14"/>
+        <TextBlock Text="або вказати на неї, можеш зробити це тут:" Grid.Column="1" Grid.Row="3" FontSize="14"/>
+
+        <TextBox Text="https://github.com/mixapaco/Maket_Lab" Grid.Column="1" Grid.Row="4" FontSize="14"/>
+
     </Grid>
 </Window>

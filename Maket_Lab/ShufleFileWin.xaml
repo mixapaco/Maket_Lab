@@ -34,17 +34,17 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Text="Вхідний файл" HorizontalAlignment="Center" Margin="5"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Text="*.*" Margin="5" HorizontalAlignment="Center" Width="120" MinWidth="120" />
-        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" MaxWidth="120" Content="Вибрати файл" Margin="5" />
+        <TextBox x:Name="InputFile" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Text="*.*" Margin="5" HorizontalAlignment="Center" Width="120" MinWidth="120" />
+        <Button x:Name="InputButton" Click="SelectFile_Click" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" MaxWidth="120" Content="Вибрати файл" Margin="5" />
 
 
         <TextBlock Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="3"  Text="Вихідний файл" HorizontalAlignment="Center" Margin="5"/>
-        <TextBox Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" Text="*.*" Margin="5" HorizontalAlignment="Center" Width="120" MinWidth="120" />
-        <Button Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="3" MaxWidth="120" Content="Вибрати файл" Margin="5" />
+        <TextBox x:Name="OutPutFile" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" Text="*.*" Margin="5" HorizontalAlignment="Center" Width="120" MinWidth="120" />
+        <Button x:Name="OutPutButton" Click="SelectFile_Click" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="3" MaxWidth="120" Content="Вибрати файл" Margin="5" />
 
         <TextBlock Grid.Row="5" Grid.Column="2" Text="Дія" HorizontalAlignment="Center" Margin="5"/>
         <StackPanel x:Name="ShuffleBox" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Row="6" Margin="5,10,0,0">
-            <RadioButton GroupName="Shuffle" Content="Перемішати" IsChecked="True" />
+            <RadioButton x:Name="ShufleRadio" GroupName="Shuffle" Content="Перемішати" IsChecked="True" />
             <RadioButton GroupName="Shuffle" Content="Відновити" />
         </StackPanel>
 
@@ -183,7 +183,7 @@
             </ComboBoxItem>
         </ComboBox>
 
-        <Button Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Width="80" HorizontalAlignment="Left" Content="Виконати" Margin="5" />
+        <Button Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Width="80" HorizontalAlignment="Left" Click="Exec_Click" Content="Виконати" Margin="5" />
         
         <Button Grid.Row="8" Grid.Column="4" Width="80" HorizontalAlignment="Center" Click="Exit_Click" Content="Вийти" Margin="5" />
         <Button Grid.Row="8" Grid.Column="6" Width="80" HorizontalAlignment="Center" Click="Help_Click" Content="Довідка" Margin="5" />

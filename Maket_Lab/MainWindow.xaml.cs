@@ -23,6 +23,14 @@ namespace Maket_Lab
         public MainWindow()
         {
             InitializeComponent();
+            try
+            {
+                Uri iconUri = new Uri("pack://application:,,,/LUCHANA.ico", UriKind.RelativeOrAbsolute);
+                this.Icon = BitmapFrame.Create(iconUri);
+            }
+            catch 
+            { 
+            }
         }
 
         private void About_Click(object sender, RoutedEventArgs e)
@@ -77,5 +85,18 @@ namespace Maket_Lab
             Codecs.LoopCodecWin loopCodecWin = new Codecs.LoopCodecWin();
             loopCodecWin.Show();
         }
+
+        private void SingleErrors_Click(object sender, RoutedEventArgs e)
+        {
+            Showing.SingleErrorView win = new Showing.SingleErrorView();
+            win.Show();
+        }
+
+        private void PacketsErrors_Click(object sender, RoutedEventArgs e)
+        {
+            Showing.PacketErrorView win = new Showing.PacketErrorView();
+            win.Show();
+        }
+
     }
 }

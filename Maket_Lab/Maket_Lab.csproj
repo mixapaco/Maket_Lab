@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -57,6 +58,10 @@
     </ApplicationDefinition>
     <Compile Include="BinWork\BinWorker.cs" />
     <Compile Include="BinWork\Matrix.cs" />
+    <Compile Include="BinWork\Shufle.cs" />
+    <Compile Include="CodecSelect.xaml.cs">
+      <DependentUpon>CodecSelect.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CodecsWork\BCHCodec.cs" />
     <Compile Include="CodecsWork\ChanelModel.cs" />
     <Compile Include="CodecsWork\IterativeCodec.cs" />
@@ -80,6 +85,12 @@
     <Compile Include="FileWork\BinFileReader.cs" />
     <Compile Include="FileWork\FileGeter.cs" />
     <Compile Include="FileWork\FileSaver.cs" />
+    <Compile Include="Showing\PacketErrorView.xaml.cs">
+      <DependentUpon>PacketErrorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Showing\SingleErrorView.xaml.cs">
+      <DependentUpon>SingleErrorView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ShufleFileWin.xaml.cs">
       <DependentUpon>ShufleFileWin.xaml</DependentUpon>
     </Compile>
@@ -89,6 +100,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChannelModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CodecSelect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,6 +169,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Showing\PacketErrorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Showing\SingleErrorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ShufleFileWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,7 +197,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -184,6 +207,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\LUCHANA.ICO" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

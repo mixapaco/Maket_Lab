@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Maket_Lab"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Лабораторний макет з кодування" Height="450" Width="800">
     <Grid>
         <Menu Height="25" VerticalAlignment="Top">
             <MenuItem Header="Файл">
@@ -15,31 +15,31 @@
             </MenuItem>
             <MenuItem Header="Лабораторні роботи" >
                 <MenuItem Header="Кодеки" >
-                    <MenuItem Header="Вибір кодека" ></MenuItem>
+                    <!--<MenuItem Header="Вибір кодека" ></MenuItem>-->
                     <MenuItem Header="Кодер Ветербі" Click="Viterbi_Click" ></MenuItem>
                     <MenuItem Header="Ітеративний" Click="Iterative_Click"></MenuItem>
                     <MenuItem Header="БЧХ -- код" Click="BCH_Click" ></MenuItem>
                     <MenuItem Header="Циклічні коди" Click="Loop_Click" ></MenuItem>
-                    <MenuItem Header="Кодер користувача" ></MenuItem>
+                    <!--<MenuItem Header="Кодер користувача" ></MenuItem>-->
                 </MenuItem>
                 <MenuItem Header="Перемішування" Click="Shuffle_Click" ></MenuItem>
                 <MenuItem Header="Модель каналу" Click="ChanellModel_Click" ></MenuItem>
             </MenuItem>
             <MenuItem Header="Режим відображення" >
-                <MenuItem Header="Одиночні помилки" ></MenuItem>
+                <MenuItem Header="Одиночні помилки" Click="SingleErrors_Click" ></MenuItem>
                 <Separator/>
-                <MenuItem Header="Пакетні помилки" ></MenuItem>    
+                <MenuItem Header="Пакетні помилки" Click="PacketsErrors_Click" ></MenuItem>    
             </MenuItem>
-            <MenuItem Header="Перегляд" >
+            <!--<MenuItem Header="Перегляд" >
                 <MenuItem Header="Побітовий" ></MenuItem>
                 <MenuItem Header="Текстовий BMP" ></MenuItem>
-            </MenuItem>
-            <MenuItem Header="Порівняння" >
+            </MenuItem>-->
+            <!--<MenuItem Header="Порівняння" >
                 <MenuItem Header="Побайтне" ></MenuItem>
                 <MenuItem Header="По стрічці" ></MenuItem>
-            </MenuItem>
+            </MenuItem>-->
             <MenuItem Header="Допомога" >
-                <MenuItem Header="Допомога" ></MenuItem>
+                <!--<MenuItem Header="Допомога" ></MenuItem>-->
                 <MenuItem Header="Про програму" Click="About_Click"></MenuItem>
             </MenuItem>
         </Menu>
